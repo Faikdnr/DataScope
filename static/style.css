@@ -1,0 +1,317 @@
+/* K-Means Analiz Aracı için özel stiller */
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Animasyonlar */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Ana Stiller */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a2e;
+    color: #e6e6e6;
+}
+
+.stApp {
+    background-color: #1a1a2e;
+}
+
+/* Başlık Stilleri */
+h1 {
+    color: #fff;
+    font-size: 2.8em;
+    margin-bottom: 1em;
+    text-align: center;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    text-shadow: 0 0 10px rgba(123, 97, 255, 0.3);
+}
+
+h1 img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* Alt Başlıklar */
+h2 {
+    color: #fff;
+    font-size: 1.8em;
+    margin: 1em 0;
+    font-weight: 500;
+    text-shadow: 0 0 5px rgba(123, 97, 255, 0.2);
+}
+
+h3, h4 {
+    color: #fff;
+    font-size: 1.4em;
+    margin: 0.8em 0;
+    font-weight: 500;
+}
+
+/* Sidebar Stilleri */
+[data-testid="stSidebar"] {
+    background-color: #16213e;
+    border-right: 1px solid #2a2a4a;
+}
+
+.sidebar .sidebar-content {
+    background: #16213e;
+    color: #fff;
+}
+
+/* Sidebar Başlıkları */
+.sidebar h1, .sidebar h2, .sidebar h3, .sidebar p, .sidebar label {
+    color: #fff;
+    margin-bottom: 1em;
+}
+
+/* File Uploader */
+[data-testid="stFileUploader"] {
+    background: #2a2a4a;
+    padding: 1.5em;
+    border-radius: 10px;
+    border: 1px solid #3a3a5a;
+    color: #fff;
+    margin: 1em 0;
+}
+
+/* Butonlar */
+.stButton button {
+    background: linear-gradient(45deg, #7b61ff, #9d84ff);
+    color: #fff;
+    border: none;
+    padding: 0.8em 1.5em;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(123, 97, 255, 0.2);
+}
+
+.stButton button:hover {
+    background: linear-gradient(45deg, #9d84ff, #7b61ff);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(123, 97, 255, 0.3);
+}
+
+/* Radio Butonları */
+.stRadio > div {
+    background: #2a2a4a;
+    padding: 1em;
+    border-radius: 8px;
+    margin: 1em 0;
+}
+
+.stRadio label {
+    color: #fff !important;
+}
+
+/* İpuçları Kutusu */
+.cluster-tips {
+    background: #2a2a4a;
+    padding: 1.5em;
+    border-radius: 10px;
+    border: 1px solid #3a3a5a;
+    margin: 1.5em 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cluster-tips h4 {
+    color: #9d84ff;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    font-weight: 500;
+}
+
+.cluster-tips ol {
+    list-style-type: decimal;
+    padding-left: 1.5em;
+    margin: 0;
+    color: #e6e6e6;
+}
+
+.cluster-tips li {
+    margin-bottom: 0.8em;
+    line-height: 1.6;
+    color: #e6e6e6;
+}
+
+/* DataFrame Stilleri */
+.stDataFrame {
+    background: #2a2a4a;
+    padding: 1em;
+    border-radius: 10px;
+    border: 1px solid #3a3a5a;
+}
+
+/* Metrik Kutuları */
+[data-testid="stMetricValue"] {
+    background: #2a2a4a;
+    padding: 1em;
+    border-radius: 8px;
+    border: 1px solid #3a3a5a;
+    color: #9d84ff !important;
+    font-weight: 600;
+}
+
+/* Slider */
+.stSlider {
+    margin: 2em 0;
+}
+
+.stSlider > div > div {
+    background-color: #2a2a4a;
+}
+
+/* Uyarı Mesajları */
+.stAlert {
+    background: #2a2a4a;
+    color: #fff;
+    padding: 1em;
+    border-radius: 8px;
+    border: 1px solid #3a3a5a;
+    margin: 1em 0;
+}
+
+/* Markdown */
+.markdown-text-container {
+    color: #e6e6e6;
+    line-height: 1.6;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a2e;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3a3a5a;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4a4a6a;
+}
+
+/* Grafikler */
+.plotly-graph-div {
+    background: #2a2a4a !important;
+    border-radius: 10px;
+    border: 1px solid #3a3a5a;
+    padding: 1em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+    
+    .stButton button {
+        width: 100%;
+    }
+}
+
+/* Ana Container */
+.main .block-container {
+    background: #1a1a2e;
+    padding: 2em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Metin Renkleri */
+p, span, label, li {
+    color: #e6e6e6;
+}
+
+/* Input Alanları */
+input, textarea, select {
+    background: #2a2a4a !important;
+    border: 1px solid #3a3a5a !important;
+    color: #fff !important;
+    border-radius: 8px;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #7b61ff !important;
+    box-shadow: 0 0 0 2px rgba(123, 97, 255, 0.2) !important;
+}
+
+/* Selectbox */
+.stSelectbox {
+    background: #2a2a4a;
+    border-radius: 8px;
+    margin: 1em 0;
+}
+
+.stSelectbox > div > div {
+    background: #2a2a4a !important;
+    color: #fff !important;
+}
+
+/* Footer */
+footer {
+    background: #16213e;
+    color: #e6e6e6;
+    padding: 1em;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
