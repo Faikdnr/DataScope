@@ -64,31 +64,6 @@ Varsayılan adres: `http://localhost:8501`
 ## Gereksinimler
 `requirements.txt` dosyasında listelenmiştir. Pandas ile XLSX okumak için `openpyxl` dahil edilmiştir.
 
-## Profesyonel Şekilde GitHub’a Yükleme
-
-### Yöntem A — Komut Satırı ile
-1. Git’i kurun ve yapılandırın (tek seferlik):
-   ```powershell
-   git config --global user.name "Ad Soyad"
-   git config --global user.email "mail@ornek.com"
-   ```
-2. Depoyu başlatın ve ilk commit’i yapın:
-   ```powershell
-   cd "C:\Users\Faik Döner\Desktop\Bt"
-   git init
-   git add .
-   git commit -m "feat: initial commit DataScope app"
-   ```
-3. GitHub’da boş bir repo oluşturun (ör: `datascope`). Ardından uzaktan bağlayıp gönderin:
-   ```powershell
-   git remote add origin https://github.com/<kullanici-adi>/datascope.git
-   git branch -M main
-   git push -u origin main
-   ```
-
-### Yöntem B — GitHub Desktop ile
-- Uygulamayı açın, “Add local repository” ile `Bt` klasörünü seçin, “Publish repository” ile GitHub’a gönderin.
-
 ### İyi Uygulamalar
 - Anlamlı commit mesajları kullanın (Conventional Commits önerilir)
 - Issue ve Pull Request şablonları ekleyin (ileride)
